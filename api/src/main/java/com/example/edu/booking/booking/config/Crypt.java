@@ -10,6 +10,7 @@ import java.util.UUID;
 public class Crypt {
   private static final Logger logger = LoggerFactory.getLogger(Crypt.class);
   private static final String CRYPT_KEY;
+
   static {
     CRYPT_KEY = UUID.randomUUID().toString();
   }
