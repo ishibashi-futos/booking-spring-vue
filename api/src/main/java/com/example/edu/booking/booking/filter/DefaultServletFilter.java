@@ -2,7 +2,6 @@ package com.example.edu.booking.booking.filter;
 
 import com.example.edu.booking.booking.config.Crypt;
 import com.example.edu.booking.booking.thread.ThreadLocalHolder;
-import com.example.edu.booking.booking.utility.StopWatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -28,9 +27,7 @@ public class DefaultServletFilter extends OncePerRequestFilter {
       var map = ThreadLocalHolder.get();
       map.put("auth", decoded);
     }
-    try (var stopWatch = new StopWatch(filterChain.getClass())) {
-      filterChain.doFilter(request, response);
-    }
+    filterChain.doFilter(request, response);
     logger.info("doFilterInternal end: response={}", response);
   }
 }
