@@ -25,8 +25,8 @@ jobs:
     - run: npm install
     - run: npx jest --coverage 
     - run: |
-      mkdir ../coverage/
-      cp -r ./coverage/ ../coverage/
+        mkdir ../coverage/
+        cp -r ./coverage/ ../coverage/
     - name: upload artifacts
       uses: actions/upload-artifact@v1
       with:
@@ -51,8 +51,8 @@ jobs:
     - run: npm install
     - run: npm run build
     - run: |
-      mkdir ../artifacts/
-      cp -r ./dist/ ../artifacts/
+        mkdir ../artifacts/
+        cp -r ./dist/ ../artifacts/
     - name: upload artifacts
       uses: actions/upload-artifact@v1
       with:

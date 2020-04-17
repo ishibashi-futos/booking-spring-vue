@@ -26,8 +26,8 @@ jobs:
        chmod +x ./gradlew
         ./gradlew build
     - run: |
-      mkdir ../artifacts/
-      cp build/libs/*.jar ../artifacts/
+        mkdir ../artifacts/
+        cp build/libs/*.jar ../artifacts/
     - name: upload artifacts
       uses: actions/upload-artifact@v1
       with:
