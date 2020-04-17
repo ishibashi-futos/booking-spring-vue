@@ -21,12 +21,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd ui/
-    - run: npm install
-    - run: npx jest --coverage 
+    - run: npm install --prefix ui/
+    - run: npm run  --prefix ui/ test:unit -- --coverage 
     - run: |
-        mkdir ../coverage/
-        cp -r ./coverage/ ../coverage/
+        mkdir coverage/
+        cp -r ui/coverage/ coverage/
     - name: upload artifacts
       uses: actions/upload-artifact@v1
       with:
@@ -47,12 +46,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd ui/
-    - run: npm install
-    - run: npm run build
+    - run: npm install --prefix ui/
+    - run: npm run build --precix ui/
     - run: |
-        mkdir ../artifacts/
-        cp -r ./dist/ ../artifacts/
+        mkdir artifacts/
+        cp -r ui/dist/** artifacts/
     - name: upload artifacts
       uses: actions/upload-artifact@v1
       with:
