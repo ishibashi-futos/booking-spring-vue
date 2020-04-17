@@ -1,5 +1,6 @@
 package com.example.edu.booking.booking.controller;
 
+import com.example.edu.booking.booking.config.Crypt;
 import com.example.edu.booking.booking.request.AuthenticationRequest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -28,8 +29,9 @@ class AuthenticationControllerTest {
     request.setUsername("ishibashi.futos");
     request.setPassword("P@s5w0rd");
     var response = this.controller.auth(request);
+    var decoded = Crypt.decode(response.token);
     Assertions.assertAll("permitted",
-      () -> Assertions.assertEquals(response.token, request.getUsername() + ":" + request.getPassword())
+      () -> Assertions.assertEquals(decoded, request.getUsername())
     );
   }
 }
