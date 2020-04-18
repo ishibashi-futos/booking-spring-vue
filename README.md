@@ -1,5 +1,8 @@
 # 会議予約システム（サンプルアプリ）のSpringBoot & Vueによる実装です
 
+![](https://github.com/ishibashi-futos/booking-spring-vue/workflows/build%20api/badge.svg)
+![](https://github.com/ishibashi-futos/booking-spring-vue/workflows/build%20ui/badge.svg)
+
 ## API 
 
 * Java: 1.8
