@@ -4,6 +4,7 @@
 
 | column name | type | length | pk | required |
 | :-- | :-- | :-- | :-- | :-- | :-- |
+| id | String(UUID) | 63 | pk_booking | true |
 | room_id | String(UUID) | 63 | pk_booking | true |
 | start_date | datetime | - | pk_booking | true
 | end_date | datetime | - | - | true |
