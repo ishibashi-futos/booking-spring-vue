@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface BookingJpaRepository extends JpaRepository<Booking, String> {
-  public List<Booking> findByCreateUserIdOrderByStartDate(final String username);
+  List<Booking> findByCreateUserIdOrderByStartDate(final String username);
 }

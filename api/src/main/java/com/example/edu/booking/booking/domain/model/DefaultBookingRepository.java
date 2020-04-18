@@ -19,7 +19,8 @@ public class DefaultBookingRepository implements BookingRepository {
 
   public List<BookingEntity> findByUserId(String userId) {
     var bookingList = this.repository.findByCreateUserIdOrderByStartDate(userId);
-    var typeToken = new TypeToken<List<BookingEntity>>() {}.getType();
+    var typeToken = new TypeToken<List<BookingEntity>>() {
+    }.getType();
     return this.mapper.map(bookingList, typeToken);
   }
 }

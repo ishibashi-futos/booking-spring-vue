@@ -25,6 +25,7 @@ public abstract class StringIdentifierEntity implements Entity<String> {
 
   /**
    * 新規IDを生成し、IDへ設定します.
+   *
    * @return 生成したUUIDの値
    */
   public String generateId() {
