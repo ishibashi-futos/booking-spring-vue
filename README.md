@@ -5,7 +5,7 @@
 
 ## API 
 
-* Java: 1.8
+* Java: 11
 * SpringBoot: 2.2.6.RELEASE
 
 ## Run or Build and UnitTest
