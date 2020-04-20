@@ -24,7 +24,7 @@ jobs:
       run: |
         cd api/
         chmod +x ./gradlew
-         ./gradlew build
+         ./gradlew build -xspotbugsTest
     - run: |
         mkdir artifacts/
         cp api/build/libs/*.jar artifacts/
