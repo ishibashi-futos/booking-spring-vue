@@ -28,7 +28,7 @@ jobs:
     - run: |
         mkdir -p artifacts/{libs,reports}
         cp api/build/libs/*.jar artifacts/libs/
-        cp api/build/reports/** artifacts/reports/
+        cp -r api/build/reports/** artifacts/reports/
     - name: upload artifacts
       uses: actions/upload-artifact@v1
       with:
