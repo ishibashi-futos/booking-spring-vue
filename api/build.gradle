@@ -1,6 +1,7 @@
 plugins {
   id 'org.springframework.boot' version '2.2.6.RELEASE'
   id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+  id 'com.github.spotbugs' version '4.0.5'
   id 'java'
   id 'idea'
 }
@@ -39,8 +40,14 @@ dependencies {
   // https://mvnrepository.com/artifact/org.modelmapper/modelmapper
   compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.7'
 
+  compile 'com.github.spotbugs:spotbugs:4.0.2'
 }
 
 test {
   useJUnitPlatform()
 }
+
+spotbugs {
+  toolVersion = '4.0.2'
+}
+
