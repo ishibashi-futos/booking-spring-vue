@@ -1,5 +1,6 @@
 spring:
-  profiles: prod
+  autoconfigure:
+    exclude: org.springframework.boot.devtools.autoconfigure.DevToolsDataSourceAutoConfiguration
   devtools:
     restart:
       enabled: true
@@ -9,11 +10,10 @@ spring:
       ddl-auto: create
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:./db/sandbox
+    url: jdbc:h2:./db/sandbox-test
     username: h2
     password: P@s5w0rd
     initialization-mode: always
-    schema: classpath:schema.sql
 logging:
   level:
     org:
