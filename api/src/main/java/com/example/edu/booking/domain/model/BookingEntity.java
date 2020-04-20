@@ -8,11 +8,12 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class BookingEntity extends StringIdentifierEntity {
-  public String roomId;
+  private String roomId;
+  private String roomName;
   private LocalDateTime startDate;
   private LocalDateTime endDate;
   private LocalDateTime createDate;
-  private String createUserId;
+  private String createUserName;
 
   @Override
   public boolean isTransient() {

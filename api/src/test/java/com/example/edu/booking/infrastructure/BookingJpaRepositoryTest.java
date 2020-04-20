@@ -54,4 +54,10 @@ public class BookingJpaRepositoryTest {
         })
     );
   }
+
+  @Test
+  public void cannotFind() {
+    var dataList = this.bookingJpaRepository.findByCreateUserIdOrderByStartDate(UUID.randomUUID().toString());
+    Assertions.assertEquals(0, dataList.size());
+  }
 }
